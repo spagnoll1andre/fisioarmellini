@@ -65,16 +65,6 @@ const conditions = [
     ]
   },
   {
-    id: 6,
-    image: shoulderAnatomy,
-    title: "Contrattura muscolare",
-    benefits: [
-      "Sintomi comuni: tensione e dolore al muscolo",
-      "Cause frequenti: sforzo, postura o sovraccarico",
-      "Approccio terapeutico: decontrattura e recupero funzione"
-    ]
-  },
-  {
     id: 7,
     image: physioImage,
     title: "Coxartrosi (anca)",
@@ -87,21 +77,11 @@ const conditions = [
   {
     id: 8,
     image: spineAnatomy,
-    title: "Dolore alla schiena",
+    title: "Lombalgia",
     benefits: [
       "Sintomi comuni: tensione o dolore lombare/dorsale",
       "Cause frequenti: postura, stress, sforzi ripetuti",
       "Approccio terapeutico: riequilibrio muscolare e mobilità"
-    ]
-  },
-  {
-    id: 9,
-    image: physioImage2,
-    title: "Dolore alla spalla",
-    benefits: [
-      "Sintomi comuni: dolore nei movimenti del braccio",
-      "Cause frequenti: infiammazione, sovraccarico, instabilità",
-      "Approccio terapeutico: recupero mobilità e stabilità"
     ]
   },
   {
@@ -127,7 +107,7 @@ const conditions = [
   {
     id: 12,
     image: physioImage,
-    title: "Dorsalgia / Dorsopatia",
+    title: "Dorsalgia",
     benefits: [
       "Sintomi comuni: dolore nella zona dorsale",
       "Cause frequenti: rigidità, postura, sovraccarico",
@@ -185,29 +165,9 @@ const conditions = [
     ]
   },
   {
-    id: 18,
-    image: spineAnatomy,
-    title: "Malattia di Dupuytren",
-    benefits: [
-      "Sintomi comuni: retrazione palmare e rigidità dita",
-      "Cause frequenti: ispessimento progressivo della fascia palmare",
-      "Approccio terapeutico: mobilizzazione e miglioramento funzionale"
-    ]
-  },
-  {
-    id: 19,
-    image: physioImage2,
-    title: "Paresi facciale",
-    benefits: [
-      "Sintomi comuni: difficoltà nei movimenti del volto",
-      "Cause frequenti: infiammazione o compressione del nervo facciale",
-      "Approccio terapeutico: stimolazione neuromuscolare mirata"
-    ]
-  },
-  {
     id: 20,
     image: kneeAnatomy,
-    title: "Sciatica",
+    title: "Sciatalgia",
     benefits: [
       "Sintomi comuni: dolore lombare irradiato alla gamba",
       "Cause frequenti: compressione del nervo sciatico",
@@ -224,36 +184,6 @@ const conditions = [
       "Approccio terapeutico: esercizi correttivi e controllo posturale"
     ]
   },
-  {
-    id: 22,
-    image: physioImage,
-    title: "Slogatura",
-    benefits: [
-      "Sintomi comuni: dolore, gonfiore e instabilità articolare",
-      "Cause frequenti: trauma con distorsione del legamento",
-      "Approccio terapeutico: recupero mobilità e rinforzo"
-    ]
-  },
-  {
-    id: 23,
-    image: spineAnatomy,
-    title: "Tendinite",
-    benefits: [
-      "Sintomi comuni: dolore durante movimento e carico",
-      "Cause frequenti: sovraccarico o microtraumi ripetuti",
-      "Approccio terapeutico: terapia manuale ed esercizi specifici"
-    ]
-  },
-  {
-    id: 24,
-    image: physioImage2,
-    title: "Torcicollo",
-    benefits: [
-      "Sintomi comuni: dolore e blocco cervicale",
-      "Cause frequenti: movimenti bruschi, postura o tensioni",
-      "Approccio terapeutico: decontrattura e mobilizzazione"
-    ]
-  }
 ];
 
 const ConditionsSection = () => {
@@ -261,10 +191,10 @@ const ConditionsSection = () => {
 
   const ConditionCard = ({ condition }: { condition: typeof conditions[0] }) => (
     <div className="space-y-6 flex flex-col border border-border rounded-2xl p-6 h-full bg-card">
-      <img 
+      <img
         src={condition.image}
         alt={condition.title}
-        className="rounded-2xl w-full h-48 object-cover" 
+        className="rounded-2xl w-full h-48 object-cover"
       />
       <div className="space-y-4 flex-1">
         <h3 className="text-2xl font-bold text-foreground">
@@ -310,10 +240,10 @@ const ConditionsSection = () => {
             ))}
           </div>
         )}
-        
+
         <div className="flex justify-center mt-12">
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="rounded-full px-8"
             onClick={() => setIsExpanded(!isExpanded)}
           >
