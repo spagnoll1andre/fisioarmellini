@@ -5,12 +5,12 @@ const ContactCards = () => {
     {
       icon: MapPin,
       title: "Dove sono",
-      content: "Via Roma 123, 00100 Roma, Italia",
+      content: "Via Giuseppe mercalli 11 Roma Parioli",
     },
     {
       icon: Phone,
       title: "Telefono",
-      content: "+39 123 456 7890",
+      content: "+39 3791009600",
     },
     {
       icon: Mail,

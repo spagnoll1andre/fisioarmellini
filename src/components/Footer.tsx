@@ -6,20 +6,20 @@ const Footer = () => {
     <footer className="bg-[hsl(150_50%_98%)] py-16">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
-          
+
           {/* Colonna 1: Logo e Testo */}
           <div>
             <div className="flex items-center gap-2 mb-6">
               {/* 2. Logo (come da tua istruzione: src/public/logo_removed.png) */}
-              <img 
-                src="/logo_removed.png" 
-                alt="Logo" 
-                className="h-8 w-auto" 
+              <img
+                src="/logo_removed.png"
+                alt="Logo"
+                className="h-8 w-auto"
               />
             </div>
             {/* 3. Testo aggiornato (preso dallo screenshot) */}
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Dal dolore alla ripresa, ogni giorno aiuto le persone a ritrovare libertà di movimento, 
+              Dal dolore alla ripresa, ogni giorno aiuto le persone a ritrovare libertà di movimento,
               benessere e fili proprio corpo.
             </p>
             {/* 4. Copyright RIMOSSO da qui */}
@@ -37,12 +37,12 @@ const Footer = () => {
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-5 h-5" />
                 {/* 6. Telefono aggiornato */}
-                <span>+39 392 178 0744</span>
+                <span>+39  3791009600</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5" />
                 {/* 7. Indirizzo aggiornato */}
-                <span>Via Giuseppe Mercalli 11, Roma</span>
+                <span>Via Giuseppe Mercalli 11, Roma Parioli</span>
               </li>
             </ul>
           </div>
@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         {/* 9. Copyright (SPOSTATO QUI, fuori dalla griglia, come da screenshot) */}
         <div className="border-t border-border pt-8">
           <p className="text-sm text-muted-foreground">NovaFlow © 2025</p>

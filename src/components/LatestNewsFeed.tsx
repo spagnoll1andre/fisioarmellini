@@ -1,54 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { User, Stethoscope } from "lucide-react";
+import { Stethoscope, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
-import blog1 from "@/assets/blog-1.jpg";
-import blog2 from "@/assets/blog-2.jpg";
-import blog3 from "@/assets/blog-3.jpg";
-
-interface BlogPost {
-  id: number;
-  image: string;
-  date: string;
-  author: string;
-  category: string;
-  title: string;
-  excerpt: string;
-}
-
-const blogPosts: BlogPost[] = [
-  {
-    id: 1,
-    image: blog1,
-    date: "01/01/25",
-    author: "Admin",
-    category: "Healthcare",
-    title: "Empower Yourself and Your Health",
-    excerpt:
-      "Discover professional physiotherapy techniques that can transform your daily wellness routine and improve mobility.",
-  },
-  {
-    id: 2,
-    image: blog2,
-    date: "05/01/25",
-    author: "Admin",
-    category: "Healthcare",
-    title: "Essential Stretching for Daily Wellness",
-    excerpt:
-      "Learn simple yet effective stretching exercises you can incorporate into your morning routine for better flexibility.",
-  },
-  {
-    id: 3,
-    image: blog3,
-    date: "10/01/25",
-    author: "Admin",
-    category: "Healthcare",
-    title: "Understanding Your Treatment Plan",
-    excerpt:
-      "A comprehensive guide to making the most of your healthcare consultations and physiotherapy sessions.",
-  },
-];
+import { Button } from "@/components/ui/button";
+import { getLatestPosts, formatDate } from "@/lib/blog";
 
 const LatestNewsFeed = () => {
+  const blogPosts = getLatestPosts(3);
+
   return (
     <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -67,19 +24,25 @@ const LatestNewsFeed = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
             <article
-              key={post.id}
+              key={post.slug}
               className="bg-card rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
             >
-              {/* Image with Date Overlay */}
+              {/* Image / Placeholder with Date Overlay */}
               <div className="relative">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-64 object-cover"
-                />
+                {post.cover ? (
+                  <img
+                    src={post.cover}
+                    alt={post.title}
+                    className="w-full h-64 object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-64 bg-secondary flex items-center justify-center">
+                    <span className="text-5xl select-none">🩺</span>
+                  </div>
+                )}
                 <div className="absolute bottom-4 left-4 bg-background px-4 py-2 rounded-lg shadow-sm">
                   <span className="text-foreground font-semibold text-sm">
-                    {post.date}
+                    {formatDate(post.date)}
                   </span>
                 </div>
               </div>
@@ -89,12 +52,12 @@ const LatestNewsFeed = () => {
                 {/* Meta Info */}
                 <div className="flex items-center gap-4 mb-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1.5">
-                    <User className="w-4 h-4 text-primary" />
-                    <span>By {post.author}</span>
+                    <Calendar className="w-4 h-4 text-primary" />
+                    <span>{formatDate(post.date)}</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Stethoscope className="w-4 h-4 text-primary" />
-                    <span>{post.category}</span>
+                    <span>{post.tags?.[0] ?? "Fisioterapia"}</span>
                   </div>
                 </div>
 
@@ -109,9 +72,9 @@ const LatestNewsFeed = () => {
                 </p>
 
                 {/* Read More Button */}
-                <Link to={`/blog/${post.id}`}>
+                <Link to={`/blog/${post.slug}`}>
                   <Button variant="outline" className="w-full">
-                    Read More
+                    Leggi l&apos;articolo
                   </Button>
                 </Link>
               </div>

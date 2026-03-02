@@ -60,6 +60,39 @@ All colors MUST be HSL.
   }
 }
 
+/* Blog markdown prose — allineato ai token del design system */
+@layer components {
+  .blog-prose {
+    @apply prose prose-lg max-w-none;
+    /* Heading colors */
+    --tw-prose-headings: hsl(var(--foreground));
+    --tw-prose-body: hsl(var(--foreground) / 0.8);
+    --tw-prose-bold: hsl(var(--foreground));
+    --tw-prose-links: hsl(var(--primary));
+    --tw-prose-quotes: hsl(var(--muted-foreground));
+    --tw-prose-quote-borders: hsl(var(--primary));
+    --tw-prose-code: hsl(var(--foreground));
+    --tw-prose-pre-bg: hsl(var(--secondary));
+    --tw-prose-bullets: hsl(var(--primary));
+    --tw-prose-counters: hsl(var(--primary));
+    --tw-prose-hr: hsl(var(--border));
+  }
+
+  .blog-prose h2,
+  .blog-prose h3,
+  .blog-prose h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+
+  .blog-prose blockquote {
+    border-left-color: hsl(var(--primary));
+    background-color: hsl(var(--secondary));
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
 @layer utilities {
   @keyframes marquee {
     0% {
