@@ -9,8 +9,8 @@ const StatsSection = () => {
     },
     {
       icon: Briefcase,
-      number: "92%+",
-      description: "Tasso di successo nei trattamenti completati",
+      number: "60+",
+      description: "Trattamenti certificati",
     },
     {
       icon: Heart,
