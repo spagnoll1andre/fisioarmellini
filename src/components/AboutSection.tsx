@@ -20,7 +20,7 @@ const AboutSection = () => {
               <div className="flex items-center gap-3">
                 <Award className="w-8 h-8 text-primary" />
                 <div>
-                  <div className="text-3xl font-bold">24+</div>
+                  <div className="text-3xl font-bold">60+</div>
                   <div className="text-sm text-muted-foreground">Trattamenti certificati</div>
                 </div>
               </div>
