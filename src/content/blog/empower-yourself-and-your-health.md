@@ -1,8 +1,9 @@
 ---
-title: "Empower Yourself and Your Health"
+title: "Ritrova Energia, Movimento e Benessere Ogni Giorno"
+cover: "/3_empower_blog.png"
 date: "2025-01-01"
-excerpt: "Discover professional physiotherapy techniques that can transform your daily wellness routine and improve mobility."
-slug: empower-yourself-and-your-health
+excerpt: "Scopri come la fisioterapia personalizzata può aiutarti a prevenire il dolore, migliorare la mobilità e costruire una routine di salute duratura."
+slug: ritrova-energia-movimento-e-benessere-ogni-giorno
 tags:
   - Benessere
   - Fisioterapia

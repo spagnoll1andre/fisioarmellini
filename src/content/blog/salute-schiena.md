@@ -1,5 +1,6 @@
 ---
 title: "Salute della Schiena e Riabilitazione"
+cover: "/2_schiena_blog.png"
 date: "2025-01-10"
 excerpt: "Consigli esperti per mantenere una colonna vertebrale sana e recuperare da infortuni alla schiena con esercizi mirati e un approccio progressivo."
 slug: salute-schiena

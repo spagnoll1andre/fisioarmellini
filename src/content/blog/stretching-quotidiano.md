@@ -1,7 +1,8 @@
 ---
-title: "Stretching Quotidiano per il Benessere"
-date: "2025-01-05"
-excerpt: "Scopri una routine di stretching semplice ed efficace da integrare nella tua mattina per una migliore flessibilità e meno tensioni."
+title: "Stretching Quotidiano: Benefici e routine per una postura migliore"
+cover: "/1_stretching_blog.png"
+date: "2025-01-15"
+excerpt: "Lo stretching non è solo per gli atleti. Scopri come 10 minuti di allungamento al giorno possono trasformare la tua postura e il tuo benessere."
 slug: stretching-quotidiano
 tags:
   - Esercizi
