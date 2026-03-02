@@ -3,16 +3,16 @@ import { Instagram, Phone } from "lucide-react";
 const MarqueeBar = () => {
   // 1. Aggiornato l'array per includere gli 'href' e le proprietà dei link
   const content = [
-    { 
-      icon: Instagram, 
+    {
+      icon: Instagram,
       text: "Instagram: dottoressa.armellini",
       href: "https://www.instagram.com/dottoressa.armellini",
       target: "_blank" // Apre in una nuova scheda
     },
-    { 
-      icon: Phone, 
-      text: "Contattami: +39 392 1780744",
-      href: "tel:+393921780744", // Link per avviare la chiamata
+    {
+      icon: Phone,
+      text: "Contattami: +39 3791009600",
+      href: "tel:+393791009600", // Link per avviare la chiamata
       target: "_self" // Apre nella stessa scheda
     },
   ];

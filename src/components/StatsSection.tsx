@@ -4,7 +4,7 @@ const StatsSection = () => {
   const stats = [
     {
       icon: User,
-      number: "9+",
+      number: "6+",
       description: "Anni di esperienza nel settore della fisioterapia",
     },
     {
@@ -31,9 +31,8 @@ const StatsSection = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`text-center py-8 ${
-                index < stats.length - 1 ? "md:border-r border-border" : ""
-              }`}
+              className={`text-center py-8 ${index < stats.length - 1 ? "md:border-r border-border" : ""
+                }`}
             >
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 rounded-full border-2 border-success-green flex items-center justify-center">

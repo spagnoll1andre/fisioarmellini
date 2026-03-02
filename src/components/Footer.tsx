@@ -19,8 +19,7 @@ const Footer = () => {
             </div>
             {/* 3. Testo aggiornato (preso dallo screenshot) */}
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Dal dolore alla ripresa, ogni giorno aiuto le persone a ritrovare libertà di movimento,
-              benessere e fili proprio corpo.
+              L’ENERGIA E LA PERSEERANZA CONQUISTANO TUTTE LE COSE.
             </p>
             {/* 4. Copyright RIMOSSO da qui */}
           </div>
@@ -32,7 +31,7 @@ const Footer = () => {
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-5 h-5" />
                 {/* 5. Email aggiornata */}
-                <span>info@medipro.com</span>
+                <span>info@fisioterapia.it</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-5 h-5" />

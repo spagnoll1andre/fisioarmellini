@@ -1,7 +1,7 @@
 ---
-title: Stretching Quotidiano per il Benessere
+title: "Stretching Quotidiano per il Benessere"
 date: "2025-01-05"
-excerpt: Scopri una routine di stretching semplice ed efficace da integrare nella tua mattina per una migliore flessibilità e meno tensioni.
+excerpt: "Scopri una routine di stretching semplice ed efficace da integrare nella tua mattina per una migliore flessibilità e meno tensioni."
 slug: stretching-quotidiano
 tags:
   - Esercizi

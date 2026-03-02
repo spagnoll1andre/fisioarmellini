@@ -1,7 +1,7 @@
 ---
-title: Empower Yourself and Your Health
+title: "Empower Yourself and Your Health"
 date: "2025-01-01"
-excerpt: Discover professional physiotherapy techniques that can transform your daily wellness routine and improve mobility.
+excerpt: "Discover professional physiotherapy techniques that can transform your daily wellness routine and improve mobility."
 slug: empower-yourself-and-your-health
 tags:
   - Benessere
