@@ -9,15 +9,17 @@ const BookingSection = () => {
           Scegli la data e l'orario che preferisci. La conferma è immediata.
         </p>
 
-        <div className="max-w-4xl mx-auto bg-card border-2 border-border rounded-lg p-8 min-h-[600px] flex items-center justify-center">
-          <div className="text-center">
-            <p className="text-muted-foreground text-lg mb-4">
-              Il calendario Setmore verrà integrato qui
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Sostituisci questo contenuto con il codice di integrazione Setmore
-            </p>
-          </div>
+        <div className="max-w-4xl mx-auto bg-card border-2 border-border rounded-lg p-1 sm:p-4 overflow-hidden">
+          <iframe
+            src="https://fisioarmellini.setmore.com/"
+            width="100%"
+            className="w-full min-h-[650px] md:min-h-[750px] rounded-md border-0"
+            frameBorder="0"
+            scrolling="auto"
+            allow="web-share; payment"
+            title="Prenotazione online"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
