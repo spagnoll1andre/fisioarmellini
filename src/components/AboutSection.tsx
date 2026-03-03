@@ -1,4 +1,4 @@
-import doctorPortrait from "@/assets/doctor_image.jpeg";
+import doctorPortrait from "@/assets/sezione_mipresento_sfondotrasparente.png";
 import { Button } from "@/components/ui/button";
 import { Award } from "lucide-react";
 import { Link } from "react-router-dom";

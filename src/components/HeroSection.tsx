@@ -1,5 +1,5 @@
 import { Star, Quote, Sparkle, Smile, Activity } from "lucide-react";
-import doctorHero from "@/assets/dottoressa.avif";
+import doctorHero from "@/assets/hero_section_chi_sono.png";
 import testimonialPatient from "@/assets/testimonial-patient.jpg";
 
 const HeroSection = () => {
@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="bg-secondary pt-1 pb-1 relative">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          
+
           {/* Colonna Sinistra (Testo) */}
           <div className="space-y-4 relative z-10">
             {/* Tag "MI PRESENTO" aggiornato */}
@@ -24,14 +24,14 @@ const HeroSection = () => {
             <p className="text-lg text-foreground/80 max-w-lg">
               Un approccio fisioterapico mirato, umano e scientifico.
             </p>
-            
+
             {/* Icona decorativa (Scintilla) */}
             <Sparkle className="w-10 h-10 text-primary absolute -bottom-16 -left-8 opacity-50" />
           </div>
 
           {/* Colonna Destra (Immagine e Card) */}
           <div className="relative">
-            
+
             <div className="relative z-10">
               {/* Immagine rimpicciolita come da tua modifica (w-3/4) */}
               <img

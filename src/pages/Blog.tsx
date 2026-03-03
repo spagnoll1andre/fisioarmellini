@@ -3,7 +3,7 @@ import BlogCard from "@/components/BlogCard";
 import Footer from "@/components/Footer";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import { getAllPosts } from "@/lib/blog";
-import doctorHero from "@/assets/dottoressa.avif";
+import doctorHero from "@/assets/hero_section_novita.png";
 
 const Blog = () => {
   const blogPosts = getAllPosts();

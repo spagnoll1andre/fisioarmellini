@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero_image.png";
+import heroImage from "@/assets/hero_section_home_sfondotrasparente.png";
 import { Instagram, Phone } from "lucide-react";
 
 // Modificato per includere link cliccabili

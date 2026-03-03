@@ -1,4 +1,4 @@
-import doctorHero from "@/assets/dottoressa.avif";
+import doctorHero from "@/assets/hero_section_patologiecurate.png";
 
 const PatologieHeader = () => {
   return (
