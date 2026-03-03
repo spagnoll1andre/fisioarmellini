@@ -57,7 +57,7 @@ const SuccessCarousel = () => {
         <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground text-center mb-12">
           I miei casi di successo più recenti
         </h2>
-        
+
         <Carousel
           opts={{
             align: "start",
@@ -70,7 +70,7 @@ const SuccessCarousel = () => {
               <CarouselItem key={caseItem.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <Link to={`/success/${caseItem.id}`}>
                   <Card className="overflow-hidden rounded-2xl border-0 shadow-lg group cursor-pointer">
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-square md:aspect-[4/3] overflow-hidden">
                       <img
                         src={caseItem.image}
                         alt={caseItem.title}
