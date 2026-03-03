@@ -1,24 +1,38 @@
-import { Heart, Stethoscope } from "lucide-react";
+import doctorHero from "@/assets/dottoressa.avif";
 
 const TrattamentiHeader = () => {
   return (
-    <section className="relative bg-secondary py-20 px-6 overflow-hidden">
-      {/* Decorative graphics */}
-      <div className="absolute top-10 right-20 opacity-20">
-        <Stethoscope size={120} className="text-primary" strokeWidth={1} />
-      </div>
-      <div className="absolute bottom-10 left-20 opacity-20">
-        <Heart size={100} className="text-primary" strokeWidth={1} />
-      </div>
+    <section className="bg-secondary pt-1 pb-1 relative">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
 
-      <div className="container mx-auto max-w-4xl text-center relative z-10">
-        <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
-          Trattamenti Eseguiti
-        </h1>
-        <p className="text-lg md:text-xl text-foreground max-w-2xl mx-auto leading-relaxed">
-          Un approccio integrato e personalizzato per ogni esigenza riabilitativa.
-          Di seguito tutti i trattamenti disponibili.
-        </p>
+          {/* Colonna Sinistra (Testo) */}
+          <div className="space-y-4 relative z-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-background border border-border rounded-full">
+              <span className="text-sm font-medium text-primary">• TRATTAMENTI</span>
+            </div>
+
+            <h1 className="text-6xl md:text-7xl font-heading font-bold text-foreground leading-tight">
+              Trattamenti Eseguiti
+            </h1>
+
+            <p className="text-lg text-foreground/80 max-w-lg">
+              Un approccio integrato e personalizzato per ogni esigenza riabilitativa.
+              Di seguito tutti i trattamenti disponibili.
+            </p>
+          </div>
+
+          {/* Colonna Destra (Immagine) */}
+          <div className="relative">
+            <div className="relative z-10">
+              <img
+                src={doctorHero}
+                alt="Dott.ssa Armellini - Trattamenti"
+                className="w-10/12 mx-auto h-10/12 rounded-3xl"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
