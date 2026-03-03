@@ -2,8 +2,8 @@ import Header from "@/components/Header";
 import BlogCard from "@/components/BlogCard";
 import Footer from "@/components/Footer";
 import HowItWorksSection from "@/components/HowItWorksSection";
-import { Activity, Heart } from "lucide-react";
 import { getAllPosts } from "@/lib/blog";
+import doctorHero from "@/assets/dottoressa.avif";
 
 const Blog = () => {
   const blogPosts = getAllPosts();
@@ -13,20 +13,35 @@ const Blog = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-secondary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <Activity className="absolute top-20 left-[10%] w-32 h-32 text-primary" strokeWidth={1} />
-          <Heart className="absolute bottom-20 right-[15%] w-24 h-24 text-primary" strokeWidth={1} />
-        </div>
+      <section className="bg-secondary pt-1 pb-1 relative">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
 
-        <div className="container mx-auto px-6 py-20 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              News e Blog
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Approfondimenti, consigli e novità dal mondo della fisioterapia per aiutarti a vivere una vita più sana e attiva.
-            </p>
+            {/* Colonna Sinistra (Testo) */}
+            <div className="space-y-4 relative z-10">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-background border border-border rounded-full">
+                <span className="text-sm font-medium text-primary">• BLOG E NEWS</span>
+              </div>
+
+              <h1 className="text-6xl md:text-7xl font-heading font-bold text-foreground leading-tight">
+                News e Blog
+              </h1>
+
+              <p className="text-lg text-foreground/80 max-w-lg">
+                Approfondimenti, consigli e novità dal mondo della fisioterapia per aiutarti a vivere una vita più sana e attiva.
+              </p>
+            </div>
+
+            {/* Colonna Destra (Immagine) */}
+            <div className="relative">
+              <div className="relative z-10">
+                <img
+                  src={doctorHero}
+                  alt="Dott.ssa Armellini - Blog"
+                  className="w-10/12 mx-auto h-10/12 rounded-3xl"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
