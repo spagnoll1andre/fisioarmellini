@@ -47,10 +47,10 @@ const conditions = [
 const ConditionsSectionHome = () => {
   const ConditionCard = ({ condition }: { condition: typeof conditions[0] }) => (
     <div className="space-y-6 flex flex-col border border-border rounded-2xl p-6 h-full bg-card">
-      <img 
+      <img
         src={condition.image}
         alt={condition.title}
-        className="rounded-2xl w-full h-48 object-cover" 
+        className="rounded-2xl w-full h-48 object-cover"
       />
       <div className="space-y-4 flex-1">
         <h3 className="text-2xl font-bold text-foreground">
@@ -77,7 +77,7 @@ const ConditionsSectionHome = () => {
             Patologie Curate
           </h2>
           <p className="text-lg text-foreground/80 leading-relaxed max-w-3xl mx-auto">
-            Affronto un'ampia gamma di patologie, muscolari e dermatofunzionali. 
+            Affronto un'ampia gamma di patologie, muscolari e dermatofunzionali.
             Di seguito una panoramica completa.
           </p>
         </div>
@@ -99,9 +99,9 @@ const ConditionsSectionHome = () => {
           <CarouselPrevious className="hidden md:flex" />
           <CarouselNext className="hidden md:flex" />
         </Carousel>
-        
+
         <div className="flex justify-center mt-12">
-          <Link to="/trattamenti">
+          <Link to="/patologie">
             <Button size="lg" className="rounded-full px-8">
               Vedi tutte le patologie
             </Button>

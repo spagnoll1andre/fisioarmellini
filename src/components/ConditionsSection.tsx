@@ -1,12 +1,5 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import physioImage from "@/assets/hero-treatment-1.jpg";
 import physioImage2 from "@/assets/hero-treatment-2.jpg";
 import shoulderAnatomy from "@/assets/shoulder-anatomy.jpg";
@@ -188,6 +181,7 @@ const conditions = [
 
 const ConditionsSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const displayedConditions = isExpanded ? conditions : conditions.slice(0, 6);
 
   const ConditionCard = ({ condition }: { condition: typeof conditions[0] }) => (
     <div className="space-y-6 flex flex-col border border-border rounded-2xl p-6 h-full bg-card">
@@ -215,31 +209,11 @@ const ConditionsSection = () => {
   return (
     <section id="conditions" className="w-full bg-background py-8 px-6">
       <div className="max-w-7xl mx-auto">
-        {!isExpanded ? (
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-4">
-              {conditions.slice(0, 3).map((condition) => (
-                <CarouselItem key={condition.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <ConditionCard condition={condition} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {conditions.map((condition) => (
-              <ConditionCard key={condition.id} condition={condition} />
-            ))}
-          </div>
-        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {displayedConditions.map((condition) => (
+            <ConditionCard key={condition.id} condition={condition} />
+          ))}
+        </div>
 
         <div className="flex justify-center mt-12">
           <Button
@@ -247,7 +221,7 @@ const ConditionsSection = () => {
             className="rounded-full px-8"
             onClick={() => setIsExpanded(!isExpanded)}
           >
-            {isExpanded ? "Mostra meno" : "Vedi tutte le patologie"}
+            {isExpanded ? "Mostra meno" : "Tutte le patologie"}
           </Button>
         </div>
       </div>

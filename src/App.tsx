@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Index from "./pages/Index";
 import ChiSono from "./pages/ChiSono";
+import Patologie from "./pages/Patologie";
 import Trattamenti from "./pages/Trattamenti";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -46,6 +47,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/chi-sono" element={<ChiSono />} />
+          <Route path="/patologie" element={<Patologie />} />
           <Route path="/trattamenti" element={<Trattamenti />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />

@@ -1,15 +1,26 @@
+import { Heart, Stethoscope } from "lucide-react";
+
 const TrattamentiHeader = () => {
   return (
-    <div className="bg-background pt-16 pb-8 px-6">
-      <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
-          Trattamenti
-        </h2>
-        <p className="text-lg text-foreground/80 leading-relaxed">
-          Un approccio integrato e personalizzato per ogni esigenza riabilitativa. Di seguito tutti i trattamenti disponibili.
+    <section className="relative bg-secondary py-20 px-6 overflow-hidden">
+      {/* Decorative graphics */}
+      <div className="absolute top-10 right-20 opacity-20">
+        <Stethoscope size={120} className="text-primary" strokeWidth={1} />
+      </div>
+      <div className="absolute bottom-10 left-20 opacity-20">
+        <Heart size={100} className="text-primary" strokeWidth={1} />
+      </div>
+
+      <div className="container mx-auto max-w-4xl text-center relative z-10">
+        <h1 className="text-5xl md:text-6xl font-heading font-bold text-foreground mb-6">
+          Trattamenti Eseguiti
+        </h1>
+        <p className="text-lg md:text-xl text-foreground max-w-2xl mx-auto leading-relaxed">
+          Un approccio integrato e personalizzato per ogni esigenza riabilitativa.
+          Di seguito tutti i trattamenti disponibili.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
