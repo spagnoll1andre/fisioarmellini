@@ -19,7 +19,7 @@ const MarqueeBar = () => {
   ];
 
   return (
-    <div className="bg-primary text-primary-foreground overflow-hidden h-[calc(1em+12px)] md:py-6">
+    <div className="bg-primary text-primary-foreground overflow-hidden h-[calc(1em+2px)] md:py-6">
       <div className="animate-marquee whitespace-nowrap flex gap-12">
         {[...Array(4)].map((_, i) => (
           <div key={i} className="flex gap-20 items-center">
@@ -30,7 +30,7 @@ const MarqueeBar = () => {
                 href={item.href}
                 target={item.target}
                 rel="noopener noreferrer"
-                className="hidden md:flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
+                className="flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
               >
                 <item.icon className="w-6 h-6" />
                 <span>{item.text}</span>
